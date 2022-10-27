@@ -32,10 +32,6 @@ services:
     container_name: www_docker_symfony_eleven
     ports:
       - "8080:80"
-    volumes:
-      - ./docker/vhosts:/etc/apache2/sites-enabled
-      - ./:/var/www/
-      - /var/www/project/vendor/
     restart: always
     networks:
       - dev

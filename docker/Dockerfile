@@ -1,4 +1,8 @@
+FROM composer:1.8 AS composer
+
 FROM php:8.1-apache
+
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
@@ -15,10 +19,8 @@ COPY . /var/www/
 
 COPY ./docker/vhosts/apache.conf /etc/apache2/sites-available/000-default.conf
 
-RUN cd /var/www && \
-    composer install && \
-    npm install
-
 WORKDIR /var/www/
+
+RUN composer install
 
 EXPOSE 80
