@@ -11,7 +11,13 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 RUN apt update && apt install -yqq nodejs npm \
     unzip
 
-COPY ./project /var/www/
+COPY . /var/www/
+
+COPY ./docker/vhosts/apache.conf /etc/apache2/sites-available/000-default.conf
+
+RUN cd /var/www && \
+    composer install && \
+    npm install
 
 WORKDIR /var/www/
 

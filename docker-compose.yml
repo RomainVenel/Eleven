@@ -27,13 +27,13 @@ services:
 
   www:
     build:
-      context: ..
+      context: .
       dockerfile: docker/Dockerfile
     container_name: www_docker_symfony_eleven
     ports:
       - "8080:80"
     volumes:
-      - ./project/docker/vhosts:/etc/apache2/sites-enabled
+      - ./docker/vhosts:/etc/apache2/sites-enabled
       - ./:/var/www/
       - /var/www/project/vendor/
     restart: always
