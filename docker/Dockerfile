@@ -22,5 +22,8 @@ COPY ./docker/vhosts/apache.conf /etc/apache2/sites-available/000-default.conf
 WORKDIR /var/www/
 
 RUN composer install
+RUN composer require symfony/webpack-encore-bundle
+RUN npm install
+RUN npm run build
 
 EXPOSE 80

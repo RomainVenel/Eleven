@@ -35,8 +35,6 @@ services:
     restart: always
     networks:
       - dev
-    volumes:
-      - .:/var/www
 
 networks:
   dev:
