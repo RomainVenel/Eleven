@@ -40,4 +40,5 @@ php bin/console d:m:m
 
 Launch your browser and have fun !
 
-- Go to http://localhost:8080
+- Application => http://localhost:8080
+- PhpMyAdmin => http://localhost:8081
