@@ -79,7 +79,7 @@ function New() {
                     <option>Canard</option>
                 </select>
 
-                <input type="submit" value="Sign up"/>
+                <input type="submit" value="Créer"/>
             </form>
             <div className="bloc-images">
                 <img alt={animal} src={require(`/assets/images/${animal}.png`)}/>

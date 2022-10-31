@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="174a9cc4-2c19-47fd-b3e3-08ae34ef9d0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/react/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/react/components/app.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/react/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/react/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/react/components/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/react/components/Edit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/react/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/react/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/react/components/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/react/components/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/react/components/New.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/react/components/New.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AstronautController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AstronautController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/astronaut/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/astronaut/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/arengi/Bureau/dock/assets/images",
+    "last_opened_file_path": "/home/arengi/Bureau/Eleven/assets/images",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "/snap/phpstorm/295/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -214,6 +212,7 @@
       <workItem from="1666882921410" duration="769000" />
       <workItem from="1666967065020" duration="14699000" />
       <workItem from="1667116736391" duration="35980000" />
+      <workItem from="1667228443034" duration="4446000" />
     </task>
     <servers />
   </component>

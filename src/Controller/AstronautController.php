@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Astronaut;
-use App\Form\AstronautType;
 use App\Repository\AstronautRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;

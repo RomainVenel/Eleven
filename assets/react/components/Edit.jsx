@@ -98,7 +98,7 @@ function Edit() {
                     <option value="canard">Canard</option>
                 </select>
 
-                <input type="submit" value="Sign up"/>
+                <input type="submit" value="Modifier"/>
             </form>
             <div className="bloc-images">
                 {!loading &&
