@@ -31,6 +31,8 @@ function New() {
             .catch(function (response) {
                 console.log(response);
             });
+        } else {
+            document.getElementById('form-errors').style.display = 'flex';
         }
 
     }

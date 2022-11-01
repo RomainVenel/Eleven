@@ -14,11 +14,9 @@ use Symfony\Component\Serializer\SerializerInterface;
 class AstronautController extends AbstractController
 {
     #[Route('/', name: 'app_astronaut_index', methods: ['GET'])]
-    public function index(AstronautRepository $astronautRepository): Response
+    public function index(): Response
     {
-        return $this->render('astronaut/index.html.twig', [
-            'astronauts' => $astronautRepository->findAll(),
-        ]);
+        return $this->render('astronaut/index.html.twig');
     }
 
     #[Route('/astronauts', name: 'app_get_astronauts', methods: ['GET'])]
@@ -50,9 +48,14 @@ class AstronautController extends AbstractController
 
         $astronaut = $astronautRepository->find($request->query->get('id'));
 
-        $json = $serializer->serialize($astronaut, 'json');
+        if (!is_null($astronaut)) {
+            $json = $serializer->serialize($astronaut, 'json');
+            $response = new JsonResponse($json, 200, [], true);
+        } else {
+            $response = new Response('not found', 200, []);
+        }
 
-        return new JsonResponse($json, 200, [], true);
+        return $response;
     }
 
     #[Route('/editAstronaut', name: 'app_astronaut_edit', methods: ['POST'])]
@@ -60,21 +63,34 @@ class AstronautController extends AbstractController
     {
 
         $astronaut = $astronautRepository->find($request->request->get('id'));
-        $astronaut->setFirstname($request->request->get('firstname'));
-        $astronaut->setLastname($request->request->get('lastname'));
-        $astronaut->setAnimal($request->request->get('animal'));
 
-        $astronautRepository->save($astronaut, true);
+        if (!is_null($astronaut)) {
+            $astronaut->setFirstname($request->request->get('firstname'));
+            $astronaut->setLastname($request->request->get('lastname'));
+            $astronaut->setAnimal($request->request->get('animal'));
+            $astronautRepository->save($astronaut, true);
 
-        return new Response('success', 200, []);
+            $response = new Response('success', 200, []);
+        } else {
+            $response = new Response('not found', 404, []);
+        }
+
+
+        return $response;
     }
 
     #[Route('/deleteAstronaut', name: 'app_astronaut_delete', methods: ['POST'])]
     public function delete(Request $request, AstronautRepository $astronautRepository): Response
     {
         $astronaut = $astronautRepository->find($request->request->get('id'));
-        $astronautRepository->remove($astronaut, true);
+        if (!is_null($astronaut)) {
+            $astronautRepository->remove($astronaut, true);
+            $response = new Response('success', 200, []);
+        } else {
+            $response = new Response('not found', 404, []);
+        }
 
-        return new Response('success', 200, []);
+        return $response;
+
     }
 }
